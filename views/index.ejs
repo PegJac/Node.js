@@ -1,0 +1,18 @@
+<head>
+    <title>TO DO</title>
+    <link rel='stylesheet' href='/public/style/main.css'> 
+</head>
+<body>
+    <h2> TO DO: </h2>
+
+    <form action='/' method='post'>
+        <input type='text' name='name' >
+       <button type='submit'>Add task!</button>
+    </form>
+    <% for(let i=0; i<data.length; i++) { %>
+        <div><%= data[i].name %>
+            <a href="/edit/<%= data[i]._id %>"> Edit </a> 
+            <a href="/delete/<%= data[i]._id %>"> Delete </a> 
+        </div>
+    <% } %>
+</body>
